@@ -4,6 +4,7 @@ For running those scripts, some files are needed:
 2)chromosomes size file, eg, chrom.sizes.hg38.filter
 3)bin interactions from dump or sth else, with Chr, eg, dump_observed_example
 So, first step is calculate IS within whole genome, then extract the boundaries values and plot. 
+And what is IS, we select a bin and calculate all interactions between window of upstream and window of downstream of the bin.  
 # calculate whole genome IS
 python 01_Calculate_Insulation_Score.py chrom.sizes.file  dump_observed.file output binsize window
 binsize usually 10000, window usually 120000, but you can set whatever the binsize and window you want to try. just be careful binsize(means positions) in all files should be compatible to each other.
